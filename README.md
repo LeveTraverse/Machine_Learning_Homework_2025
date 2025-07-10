@@ -16,5 +16,6 @@ NBJBROU : 当月雾出现的天数
 1. 使用 LSTM 模型进行预测；（对应code文件夹下LSTM_90.py与LSTM_365.py文件）
 2. 使用 Transformer 模型进行预测；（对应code文件夹下Transformer_90.py与Transformer_365.py文件）
 3. 使用自己提出的改进模型进行预测，结构不限，例如可以结合卷积层提取局部特征后接 Transformer编码以改进长期依赖建模能力。此部分以原理的新颖程度为首要评价标准，性能为次要评价标准。（对应code文件夹下RF-CNN-LSTM_90.py与RF-CNN-LSTM_365.py文件）
+
 训练与测试： 数据集主要分为 train 和 test 两 部 分 （ 具体见文件“ train.csv ”和 “tes.csv”）。请使用两种评价标准进行测试，即均方误差（MSE）与平均绝对误差（MAE）。至少进行 五轮实验，并对结果取平均值，同时提供标准差（std）以评估结果的稳定性。 
 提示：数据处理方面应该按照以下处理 global_active_power、global_reactive_power、sub_metering_1、sub_metering_2 按天取总和 voltage、global_intensity 按天取平均 RR、NBJRR1 / NBJRR5 / NBJRR10、NBJBROU 取当天的任意一个数据
